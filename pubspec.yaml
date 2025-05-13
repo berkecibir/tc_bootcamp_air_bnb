@@ -1,6 +1,7 @@
 name: tc_bootcamp_air_bnb
-description: "A new Flutter project."
-publish_to: 'none'
+description: A new Flutter project for the TC Bootcamp Airbnb clone.
+publish_to: 'none' # This prevents publishing to pub.dev.
+
 version: 0.1.0
 
 environment:
@@ -9,6 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
+  # State Management
+  flutter_bloc: ^8.1.3
+    
+  # SVG Support for vector icons
+  flutter_svg: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -16,4 +23,18 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
+  fonts:
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald-Regular.ttf
+    - family: Poppins 
+      fonts: 
+        - asset: fonts/Poppins-Regular.ttf
+
   uses-material-design: true
+   
+  assets:
+    - assets/images/
+    - assets/vectors/
+
+
