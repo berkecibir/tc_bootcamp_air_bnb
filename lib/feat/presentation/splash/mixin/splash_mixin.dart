@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/duration/app_duration.dart';
+import 'package:tc_bootcamp_air_bnb/feat/core/widgets/navigation_helper/navigation_helper.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/auth/auth_page.dart';
 import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/splash_page.dart';
 
 mixin SplashMixin on State<SplashPage> {
@@ -9,11 +11,10 @@ mixin SplashMixin on State<SplashPage> {
     _redirectToLogin();
   }
 
-  Duration splashDurationValue() =>
-      const Duration(seconds: AppDuration.twoSecond);
+  Duration get splashDurationValue => AppDuration.twoSecond;
 
   Future<void> _redirectToLogin() async {
-    await Future.delayed(splashDurationValue());
-    //Navigation.pushReplace(page: const AuthPage());
+    await Future.delayed(splashDurationValue);
+    Navigation.pushReplace(page: const AuthPage());
   }
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/configs/asset/app_vectors.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/mixin/splash-mixin.dart';
+import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/mixin/splash_mixin.dart';
 
 class SplashPage extends StatefulWidget {
-  static const String id = 'splash';
+  static const String id = AppTexts.splashId;
   const SplashPage({super.key});
 
   @override

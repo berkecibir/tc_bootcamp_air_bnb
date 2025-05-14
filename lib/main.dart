@@ -3,7 +3,7 @@ import 'package:tc_bootcamp_air_bnb/feat/core/configs/theme/app_theme.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/init/app_init.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/router/app_router.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/navigation_helper/navigation_helper.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/splash_page.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/auth/auth_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Airbnb',
       navigatorKey: Navigation.navigationKey,
-      initialRoute: SplashPage.id,
+      initialRoute: AuthPage.id,
       routes: AppRoutes.routes,
     );
   }
