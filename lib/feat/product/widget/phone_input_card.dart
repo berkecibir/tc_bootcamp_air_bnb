@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/border/app_border_radius.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/configs/asset/app_vectors.dart';
@@ -9,6 +10,7 @@ import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_padding/device_padding.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_size/device_size.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_spacing/device_spacing.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/auth_cubit.dart';
 
 class CustomPhoneTextField extends StatelessWidget {
   const CustomPhoneTextField({
@@ -48,7 +50,7 @@ class CustomPhoneTextField extends StatelessWidget {
             Expanded(
               child: TextField(
                 onChanged: (value) {
-                  debugPrint(value);
+                  context.read<AuthCubit>().onPhoneChanged(value);
                 },
                 keyboardType: TextInputType.phone,
                 decoration: const InputDecoration(

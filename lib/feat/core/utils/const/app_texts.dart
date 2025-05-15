@@ -12,4 +12,7 @@ class AppTexts {
       'We’ll call or text to confirm your number. Standard message and date rates apply';
   static const String authCustomButtonText = 'Continue';
   static const String authOrDividerText = 'or';
+
+  // user model text
+  static const String phoneNumberModel = 'phoneNumber';
 }
