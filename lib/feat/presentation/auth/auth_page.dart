@@ -7,7 +7,7 @@ import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_spacing/device_spac
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/navigation_helper/navigation_helper.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/auth/auth_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/auth/auth_state.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/explore/explore_page.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/main/main_page.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/auth_cards.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/auth_or_divider.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/auth_page_initial_message.dart';
@@ -28,7 +28,7 @@ class AuthPage extends StatelessWidget {
       child: BlocConsumer<AuthCubit, AuthState>(
         listener: (context, state) {
           if (state is AuthSucces) {
-            Navigation.pushReplace(page: const ExplorePage());
+            Navigation.pushReplace(page: const MainPage());
           } else if (state is AuthError) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(state.message)),

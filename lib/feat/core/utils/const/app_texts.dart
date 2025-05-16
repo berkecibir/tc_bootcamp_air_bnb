@@ -5,6 +5,7 @@ class AppTexts {
   static const String exploreId = 'explore';
   static const String wishlisteId = 'wishlist';
   static const String profileId = 'profile';
+  static const String mainId = 'main';
 
   // auth page texts
   static const String authAppBarTitle = 'Login or Sign Up';

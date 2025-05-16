@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_padding/device_padding.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_size/device_size.dart';
+import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_spacing/device_spacing.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_item_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_item_state.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_state.dart';
-import 'package:tc_bootcamp_air_bnb/feat/product/widget/custom_app_bar.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/custom_fab.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/explore_item_tile.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/propert_card.dart';
@@ -29,11 +29,13 @@ class _ExplorePageState extends State<ExplorePage> {
         FocusScope.of(context).unfocus();
       },
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: const CustomFAB(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            DeviceSpacing.xlarge.height,
             Padding(
               padding: DevicePadding.small.all,
               child: const SearchField(),

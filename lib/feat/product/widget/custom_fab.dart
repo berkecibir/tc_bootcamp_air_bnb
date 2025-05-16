@@ -12,9 +12,10 @@ class CustomFAB extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.black,
-        fixedSize: const Size(100, 45),
+        fixedSize: const Size(120, 45),
       ),
       child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Text(
             AppTexts.fabTitle,
