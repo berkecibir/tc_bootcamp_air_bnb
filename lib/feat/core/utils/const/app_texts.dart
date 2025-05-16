@@ -3,6 +3,7 @@ class AppTexts {
   static const String splashId = 'splash';
   static const String authId = 'auth';
   static const String exploreId = 'explore';
+  static const String wishlisteId = 'wishlist';
 
   // auth page texts
   static const String authAppBarTitle = 'Login or Sign Up';
@@ -30,4 +31,10 @@ class AppTexts {
   static const String hotel = 'Hotel';
   static const String cabin = 'Cabin';
   static const String rooms = 'Rooms';
+
+  // propety model texts
+  static const String istanbul1 = 'İstanbul / Bahçelievler';
+  static const String istanbul2 = 'İstanbul / Kadıköy';
+  static const String ankara = 'Ankara / Etimesgut';
+  static const String karabuk = 'Karabük / Safranbolu';
 }

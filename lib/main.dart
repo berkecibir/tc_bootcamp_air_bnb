@@ -6,8 +6,12 @@ import 'package:tc_bootcamp_air_bnb/feat/core/router/app_router.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/navigation_helper/navigation_helper.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/auth/auth_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_item_cubit.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/explore_item_repository.dart';
+import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/property_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/presentation/explore/explore_page.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/splash_page.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/wishlist/wish_list_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -23,8 +27,8 @@ class MainApp extends StatelessWidget {
       providers: [
         BlocProvider<AuthCubit>(create: (_) => AuthCubit()),
         BlocProvider<ExploreItemCubit>(
-          create: (_) => ExploreItemCubit(ExploreRepository()),
-        ),
+            create: (_) => ExploreItemCubit(ExploreRepository())),
+        BlocProvider(create: (_) => ExplorePropertyCubit(PropertyRepository())),
       ],
       child: MaterialApp(
         theme: AppTheme.appTheme,
