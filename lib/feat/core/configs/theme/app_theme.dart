@@ -33,6 +33,12 @@ class AppTheme {
           fontWeight: FontWeight.w400,
           fontFamily: 'Poppins',
         ),
+        labelLarge: TextStyle(
+          color: AppColors.black,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'Poppins',
+        ),
         bodyLarge: TextStyle(
           color: AppColors.black,
           fontSize: 18,

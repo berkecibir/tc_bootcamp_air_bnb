@@ -3,10 +3,10 @@ import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/property_repository.d
 import 'explore_property_state.dart';
 
 class ExplorePropertyCubit extends Cubit<ExplorePropertyState> {
-  final PropertyRepository _repository;
+  final PropertyRepository propertyRepo;
 
-  ExplorePropertyCubit(this._repository)
-      : super(ExplorePropertyState(properties: _repository.getProperties));
+  ExplorePropertyCubit(this.propertyRepo)
+      : super(ExplorePropertyState(properties: propertyRepo.getProperties));
 
   void toggleFavorite(int id) {
     final updatedList = state.properties.map((property) {

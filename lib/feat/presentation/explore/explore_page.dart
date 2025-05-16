@@ -31,9 +31,6 @@ class _ExplorePageState extends State<ExplorePage> {
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: const CustomFAB(),
-        appBar: const CustomAppBar(
-          title: AppTexts.exploreAppBartitle,
-        ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

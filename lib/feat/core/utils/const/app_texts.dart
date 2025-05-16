@@ -4,6 +4,7 @@ class AppTexts {
   static const String authId = 'auth';
   static const String exploreId = 'explore';
   static const String wishlisteId = 'wishlist';
+  static const String profileId = 'profile';
 
   // auth page texts
   static const String authAppBarTitle = 'Login or Sign Up';
@@ -43,4 +44,24 @@ class AppTexts {
   // wishlist page texts
   static const String wishlistAppBarTitle = 'Wishlist';
   static const String wishlistBodyMessage = "No favorites yet";
+
+  // profile repo text
+  static const String userName = 'Berke Atahan';
+  static const String randomImage = 'https://picsum.photos/200/300';
+  // profile cubit text
+  static const String title = 'title';
+  static const String icon = 'icon';
+  static const String personalInfo = 'Personal Information';
+  static const String payments = 'Payments and Payouts';
+  static const String translation = 'Translation';
+  static const String notifications = 'Notifications';
+  static const String privacy = 'Privacy and Sharing';
+  static const String travel = 'Travel for Work';
+
+  // profile page texts
+  static const String viewProfile = 'View Profile';
+  static const String accountSettings = 'Account Setttings';
+  static const String profileError = 'An Error Occured';
+  static const String profileLoading = 'Profile is Loading...';
+  static const String profileAppBarTitle = 'Profile';
 }
