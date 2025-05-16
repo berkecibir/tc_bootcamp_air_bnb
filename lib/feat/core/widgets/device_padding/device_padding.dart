@@ -20,9 +20,10 @@ enum DevicePadding {
   large(AppSizes.large),
 
   ///This value is 30
-  xlarge(AppSizes.xLarge);
+  xlarge(AppSizes.xxLarge);
 
   final double value;
+
   const DevicePadding(this.value);
 
   EdgeInsets get all => EdgeInsets.all(
@@ -42,6 +43,11 @@ enum DevicePadding {
       );
 
   EdgeInsets get onlyVertical => EdgeInsets.symmetric(
+        vertical: value,
+      );
+
+  EdgeInsets get allSymtetric => EdgeInsets.symmetric(
+        horizontal: value,
         vertical: value,
       );
 }

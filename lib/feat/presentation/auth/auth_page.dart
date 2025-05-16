@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tc_bootcamp_air_bnb/feat/core/configs/theme/app_colors.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_padding/device_padding.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_spacing/device_spacing.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/navigation_helper/navigation_helper.dart';
-import 'package:tc_bootcamp_air_bnb/feat/cubit/auth_cubit.dart';
-import 'package:tc_bootcamp_air_bnb/feat/cubit/auth_state.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/auth/auth_cubit.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/auth/auth_state.dart';
 import 'package:tc_bootcamp_air_bnb/feat/presentation/explore/explore_page.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/auth_cards.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/auth_or_divider.dart';
@@ -37,54 +38,55 @@ class AuthPage extends StatelessWidget {
         builder: (context, state) {
           final bool isButtonEnabled = state is AuthPhoneValid;
           final String phoneNumber =
-              state is AuthPhoneValid ? state.phoneNumber : '';
+              state is AuthPhoneValid ? state.phoneNumber : AppTexts.empty;
 
           return GestureDetector(
             onTap: () {
               FocusScope.of(context).unfocus();
             },
             child: Scaffold(
-              resizeToAvoidBottomInset: false,
-              appBar: CustomAppBar.authAppBar(),
-              body: Padding(
-                padding: DevicePadding.small.onlyHorizontal,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    DeviceSpacing.large.height,
-                    const Center(child: WelcomeMessage()),
-                    DeviceSpacing.small.height,
-                    const CustomPhoneTextField(),
-                    DeviceSpacing.medium.height,
-                    const AuthPageInitialMessage(),
-                    DeviceSpacing.medium.height,
-                    CustomButton(
-                      onTap: () {
-                        if (isButtonEnabled) {
-                          context.read<AuthCubit>().submitPhone(phoneNumber);
-                        }
-                      },
-                      child: state is AuthLoading
-                          ? const SizedBox(
-                              width: 24,
-                              height: 24,
-                              child: CircularProgressIndicator(
-                                  strokeWidth: 2, color: Colors.white),
-                            )
-                          : Text(
-                              AppTexts.authCustomButtonText,
-                              style: AppTheme.appTheme.textTheme.displayMedium,
-                            ),
-                    ),
-                    DeviceSpacing.medium.height,
-                    const AuthOrDivider(),
-                    DeviceSpacing.medium.height,
-                    const Expanded(child: AuthCards()),
-                  ],
-                ),
-              ),
-            ),
+                resizeToAvoidBottomInset: false,
+                appBar: CustomAppBar.authAppBar(),
+                body: Padding(
+                    padding: DevicePadding.small.onlyHorizontal,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        DeviceSpacing.large.height,
+                        const Center(child: WelcomeMessage()),
+                        DeviceSpacing.small.height,
+                        const CustomPhoneTextField(),
+                        DeviceSpacing.medium.height,
+                        const AuthPageInitialMessage(),
+                        DeviceSpacing.medium.height,
+                        CustomButton(
+                          onTap: () {
+                            if (isButtonEnabled) {
+                              context
+                                  .read<AuthCubit>()
+                                  .submitPhone(phoneNumber);
+                            }
+                          },
+                          child: state is AuthLoading
+                              ? const SizedBox(
+                                  width: 24,
+                                  height: 24,
+                                  child: CircularProgressIndicator(
+                                      strokeWidth: 2, color: AppColors.white),
+                                )
+                              : Text(
+                                  AppTexts.authCustomButtonText,
+                                  style:
+                                      AppTheme.appTheme.textTheme.displayMedium,
+                                ),
+                        ),
+                        DeviceSpacing.medium.height,
+                        const AuthOrDivider(),
+                        DeviceSpacing.medium.height,
+                        const Expanded(child: AuthCards()),
+                      ],
+                    ))),
           );
         },
       ),

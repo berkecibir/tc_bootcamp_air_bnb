@@ -2,6 +2,7 @@ class AppTexts {
   // page ids
   static const String splashId = 'splash';
   static const String authId = 'auth';
+  static const String exploreId = 'explore';
 
   // auth page texts
   static const String authAppBarTitle = 'Login or Sign Up';
@@ -13,6 +14,20 @@ class AppTexts {
   static const String authCustomButtonText = 'Continue';
   static const String authOrDividerText = 'or';
 
-  // user model text
+  // auth model text
   static const String phoneNumberModel = 'phoneNumber';
+  static const String empty = '';
+
+  // explore page texts
+  static const String searchBarTitle1 = 'Where to?';
+  static const String searchBarhintText = 'Anywhere · Any week · Add guests';
+  static const String exploreAppBartitle = 'Explore';
+
+  // explore ıtems
+  static const String house = 'House';
+  static const String villa = 'Villa';
+  static const String apartment = 'Apartment';
+  static const String hotel = 'Hotel';
+  static const String cabin = 'Cabin';
+  static const String rooms = 'Rooms';
 }

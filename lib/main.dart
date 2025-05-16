@@ -4,8 +4,10 @@ import 'package:tc_bootcamp_air_bnb/feat/core/configs/theme/app_theme.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/init/app_init.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/router/app_router.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/navigation_helper/navigation_helper.dart';
-import 'package:tc_bootcamp_air_bnb/feat/cubit/auth_cubit.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/auth/auth_page.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/auth/auth_cubit.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_item_cubit.dart';
+import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/explore_item_repository.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/explore/explore_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -20,13 +22,16 @@ class MainApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<AuthCubit>(create: (_) => AuthCubit()),
+        BlocProvider<ExploreItemCubit>(
+          create: (_) => ExploreItemCubit(ExploreRepository()),
+        ),
       ],
       child: MaterialApp(
         theme: AppTheme.appTheme,
         debugShowCheckedModeBanner: false,
         title: 'Flutter Airbnb',
         navigatorKey: Navigation.navigationKey,
-        initialRoute: AuthPage.id,
+        initialRoute: ExplorePage.id,
         routes: AppRoutes.routes,
       ),
     );

@@ -10,17 +10,19 @@ import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_padding/device_padding.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_size/device_size.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_spacing/device_spacing.dart';
-import 'package:tc_bootcamp_air_bnb/feat/cubit/auth_cubit.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/auth/auth_cubit.dart';
 
 class CustomPhoneTextField extends StatelessWidget {
   const CustomPhoneTextField({
     super.key,
   });
 
+  double get customPhoneTextFieldHeightvalue => 0.15;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: DeviceSize.height! * 0.15,
+      height: DeviceSize.height! * customPhoneTextFieldHeightvalue,
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
@@ -53,14 +55,10 @@ class CustomPhoneTextField extends StatelessWidget {
                   context.read<AuthCubit>().onPhoneChanged(value);
                 },
                 keyboardType: TextInputType.phone,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: AppTexts.phoneNumberHintText,
-                  hintStyle: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.grey,
-                  ),
+                  hintStyle: AppTheme.appTheme.textTheme.bodyLarge,
                 ),
               ),
             ),

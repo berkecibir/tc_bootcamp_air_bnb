@@ -20,7 +20,7 @@ enum DeviceSpacing {
   large(AppSizes.large),
 
   /// This value 30
-  xlarge(AppSizes.xLarge);
+  xlarge(AppSizes.xxLarge);
 
   final double value;
   const DeviceSpacing(this.value);

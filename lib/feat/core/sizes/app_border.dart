@@ -19,6 +19,6 @@ class AppBorder {
   );
 
   static const BorderRadius xLarge = BorderRadius.all(
-    Radius.circular(AppSizes.xLarge),
+    Radius.circular(AppSizes.xxLarge),
   );
 }
