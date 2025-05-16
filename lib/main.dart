@@ -10,8 +10,6 @@ import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_cubit.da
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/explore_item_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/property_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/presentation/explore/explore_page.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/splash_page.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/wishlist/wish_list_page.dart';
 
 void main() {
   runApp(const MainApp());

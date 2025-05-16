@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tc_bootcamp_air_bnb/feat/core/configs/theme/app_colors.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_padding/device_padding.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_size/device_size.dart';
@@ -9,6 +8,7 @@ import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_item_state.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_state.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/custom_app_bar.dart';
+import 'package:tc_bootcamp_air_bnb/feat/product/widget/custom_fab.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/explore_item_tile.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/propert_card.dart';
 import 'package:tc_bootcamp_air_bnb/feat/product/widget/search_field.dart';
@@ -30,27 +30,7 @@ class _ExplorePageState extends State<ExplorePage> {
       },
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.black,
-            fixedSize: const Size(100, 45),
-          ),
-          child: const Row(
-            children: [
-              Text(
-                'Map',
-                style: TextStyle(
-                  color: AppColors.white,
-                ),
-              ),
-              Icon(
-                Icons.map,
-                color: AppColors.white,
-              ),
-            ],
-          ),
-          onPressed: () {},
-        ),
+        floatingActionButton: const CustomFAB(),
         appBar: const CustomAppBar(
           title: AppTexts.exploreAppBartitle,
         ),

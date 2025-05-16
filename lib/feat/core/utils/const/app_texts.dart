@@ -23,6 +23,8 @@ class AppTexts {
   static const String searchBarTitle1 = 'Where to?';
   static const String searchBarhintText = 'Anywhere · Any week · Add guests';
   static const String exploreAppBartitle = 'Explore';
+  static const String fabTitle = 'Map';
+  static const String price = '₺ / gece';
 
   // explore ıtems
   static const String house = 'House';
@@ -37,4 +39,8 @@ class AppTexts {
   static const String istanbul2 = 'İstanbul / Kadıköy';
   static const String ankara = 'Ankara / Etimesgut';
   static const String karabuk = 'Karabük / Safranbolu';
+
+  // wishlist page texts
+  static const String wishlistAppBarTitle = 'Wishlist';
+  static const String wishlistBodyMessage = "No favorites yet";
 }

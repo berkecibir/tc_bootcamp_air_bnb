@@ -27,6 +27,12 @@ class AppTheme {
           fontWeight: FontWeight.w400,
           fontFamily: 'Poppins',
         ),
+        labelMedium: TextStyle(
+          color: AppColors.grey,
+          fontSize: 14,
+          fontWeight: FontWeight.w400,
+          fontFamily: 'Poppins',
+        ),
         bodyLarge: TextStyle(
           color: AppColors.black,
           fontSize: 18,
