@@ -6,6 +6,8 @@ class AppTexts {
   static const String wishlisteId = 'wishlist';
   static const String profileId = 'profile';
   static const String mainId = 'main';
+  static const String inBoxId = 'inbox';
+  static const String tripsId = 'trips';
 
   // auth page texts
   static const String authAppBarTitle = 'Login or Sign Up';
@@ -65,4 +67,10 @@ class AppTexts {
   static const String profileError = 'An Error Occured';
   static const String profileLoading = 'Profile is Loading...';
   static const String profileAppBarTitle = 'Profile';
+
+  // inbox page texts
+  static const String inBoxAppBarTitle = 'Inbox';
+
+  // trips page texts
+  static const String tripsAppBarTitle = 'Trips';
 }

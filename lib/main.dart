@@ -13,8 +13,6 @@ import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/explore_item_reposito
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/property_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/profile/profile_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/presentation/main/main_page.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/profile/profile_page.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/splash_page.dart';
 
 void main() {
   runApp(const MainApp());
