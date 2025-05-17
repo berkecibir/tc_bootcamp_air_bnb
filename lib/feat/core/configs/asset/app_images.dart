@@ -6,4 +6,5 @@ class AppImages {
   static const String home2 = '${_basePath}home_image_2$_format';
   static const String home3 = '${_basePath}home_image_3$_format';
   static const String home4 = '${_basePath}home_image_4$_format';
+  static const String person = '${_basePath}avatar$_format';
 }

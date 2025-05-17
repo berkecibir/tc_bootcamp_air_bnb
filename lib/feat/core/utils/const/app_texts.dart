@@ -70,7 +70,8 @@ class AppTexts {
 
   // inbox page texts
   static const String inBoxAppBarTitle = 'Inbox';
-
+  static const String inBoxListTileTitle = 'Craig · Yonkers';
+  static const String inBoxListTileSubTitle = 'Canceled';
   // trips page texts
   static const String tripsAppBarTitle = 'Trips';
 }

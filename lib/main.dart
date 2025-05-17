@@ -14,7 +14,6 @@ import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/explore_item_reposito
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/property_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/inbox/in_box_item_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/profile/profile_repository.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/inbox/in_box_page.dart';
 import 'package:tc_bootcamp_air_bnb/feat/presentation/main/main_page.dart';
 
 void main() {
@@ -48,7 +47,7 @@ class MainApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Airbnb',
         navigatorKey: Navigation.navigationKey,
-        initialRoute: InBoxPage.id,
+        initialRoute: MainPage.id,
         routes: AppRoutes.routes,
       ),
     );
