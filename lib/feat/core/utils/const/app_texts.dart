@@ -47,6 +47,7 @@ class AppTexts {
   // wishlist page texts
   static const String wishlistAppBarTitle = 'Wishlist';
   static const String wishlistBodyMessage = "No favorites yet";
+  static const String tl = '₺';
 
   // profile repo text
   static const String userName = 'Berke Atahan';
@@ -68,10 +69,23 @@ class AppTexts {
   static const String profileLoading = 'Profile is Loading...';
   static const String profileAppBarTitle = 'Profile';
 
+  // inbox models
+
+  static const String inBoxMessage = 'Messages';
+  static const String inBoxNotifications = 'Notifications';
+
   // inbox page texts
   static const String inBoxAppBarTitle = 'Inbox';
   static const String inBoxListTileTitle = 'Craig · Yonkers';
   static const String inBoxListTileSubTitle = 'Canceled';
   // trips page texts
   static const String tripsAppBarTitle = 'Trips';
+  static const String upcomingReservation = 'Upcoming Reservation';
+  static const String noReservation = 'No reservations found';
+
+  // reservation repository
+  static const String status = 'Pending';
+  static const String reservationTitle = 'Yonkers';
+  static const String reservationDesc = 'Private room in home hosted by Craig';
+  static const String country = 'Turkey';
 }

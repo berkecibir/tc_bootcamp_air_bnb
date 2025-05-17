@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_padding/device_padding.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_spacing/device_spacing.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_cubit.dart';
@@ -70,7 +71,7 @@ class FavoriteProperty extends StatelessWidget {
               property.location,
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
-            Text('${property.price} ₺'),
+            Text('${property.price} ${AppTexts.tl}'),
           ],
         );
       },

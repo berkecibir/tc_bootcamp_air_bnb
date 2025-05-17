@@ -10,11 +10,13 @@ import 'package:tc_bootcamp_air_bnb/feat/cubit/explore/explore_property_cubit.da
 import 'package:tc_bootcamp_air_bnb/feat/cubit/inbox/in_box_item_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/main/main_page_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/cubit/profile/profile_cubit.dart';
+import 'package:tc_bootcamp_air_bnb/feat/cubit/trips/reservation_cubit.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/explore_item_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/explore/property_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/inbox/in_box_item_repository.dart';
 import 'package:tc_bootcamp_air_bnb/feat/data/repo/profile/profile_repository.dart';
-import 'package:tc_bootcamp_air_bnb/feat/presentation/main/main_page.dart';
+import 'package:tc_bootcamp_air_bnb/feat/data/repo/trips/reservation_repository.dart';
+import 'package:tc_bootcamp_air_bnb/feat/presentation/splash/splash_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -41,13 +43,16 @@ class MainApp extends StatelessWidget {
         BlocProvider(
           create: (_) => InBoxItemCubit(InBoxItemRepository()),
         ),
+        BlocProvider(
+          create: (_) => ReservationCubit(ReservationRepository()),
+        ),
       ],
       child: MaterialApp(
         theme: AppTheme.appTheme,
         debugShowCheckedModeBanner: false,
         title: 'Flutter Airbnb',
         navigatorKey: Navigation.navigationKey,
-        initialRoute: MainPage.id,
+        initialRoute: SplashPage.id,
         routes: AppRoutes.routes,
       ),
     );
