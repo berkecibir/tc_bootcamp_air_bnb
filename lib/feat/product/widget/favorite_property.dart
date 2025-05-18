@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tc_bootcamp_air_bnb/feat/core/configs/theme/app_colors.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/utils/const/app_texts.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_padding/device_padding.dart';
 import 'package:tc_bootcamp_air_bnb/feat/core/widgets/device_spacing/device_spacing.dart';
@@ -52,7 +53,7 @@ class FavoriteProperty extends StatelessWidget {
                       ),
                       child: IconButton(
                         icon: const Icon(Icons.favorite,
-                            color: Colors.red, size: 18),
+                            color: AppColors.white, size: 18),
                         padding: EdgeInsets.zero,
                         constraints: const BoxConstraints(),
                         onPressed: () {

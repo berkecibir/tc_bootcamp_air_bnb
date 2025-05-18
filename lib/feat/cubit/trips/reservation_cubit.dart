@@ -6,10 +6,13 @@ class ReservationCubit extends Cubit<ReservationState> {
   final ReservationRepository repository;
 
   ReservationCubit(this.repository) : super(ReservationState.initial());
-
   Future<void> loadReservations() async {
     emit(ReservationState(reservations: [], isLoading: true));
+
     final reservations = await repository.fetchReservations();
-    emit(ReservationState(reservations: reservations, isLoading: false));
+
+    if (!isClosed) {
+      emit(ReservationState(reservations: reservations, isLoading: false));
+    }
   }
 }
