@@ -15,8 +15,7 @@ Bu proje, bir Airbnb benzeri mobil uygulamanın Flutter ile geliştirilmiş hali
 
 - Flutter
 - Bloc / Cubit
-- Provider (Yapı yönetimi için)
-
+  
 ## 🔧 Kurulum
 
 ```bash
